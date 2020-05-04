@@ -1,0 +1,19 @@
+type DeckCard implements Node {
+  id: ID!
+  count: Int!
+  deck: Deck!
+  card: Card!
+}
+
+input DeckCardCreateInput {
+  deckId: String!
+  cardId: String!
+}
+
+type Mutation {
+  upsertDeckCard(data: DeckCardCreateInput!): DeckCard!
+}
+
+type Query {
+  deckCards(deckId: String): [DeckCard!]!
+}
