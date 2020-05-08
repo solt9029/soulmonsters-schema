@@ -5,13 +5,14 @@ type DeckCard implements Node {
   card: Card!
 }
 
-input DeckCardCreateInput {
+input DeckCardUpdateInput {
   deckId: String!
   cardId: String!
 }
 
 type Mutation {
-  upsertDeckCard(data: DeckCardCreateInput!): DeckCard!
+  plusDeckCard(data: DeckCardUpdateInput!): DeckCard!
+  minusDeckCard(data: DeckCardUpdateInput!): DeckCard!
 }
 
 type Query {
