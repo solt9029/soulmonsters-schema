@@ -1,5 +1,1 @@
-interface Node {
-  id: ID!
-}
-
 scalar DateTime
