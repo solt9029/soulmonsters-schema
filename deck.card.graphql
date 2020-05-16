@@ -1,5 +1,5 @@
-type DeckCard {
-  id: Int!
+type DeckCard implements Node {
+  id: ID!
   count: Int!
   deck: Deck!
   card: Card!
