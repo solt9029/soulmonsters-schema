@@ -1,0 +1,26 @@
+enum Status {
+  WAIT
+  PLAY
+  END
+}
+
+enum Phase {
+  DRAW
+  ENERGY
+  PUT
+  SOMETHING
+  BATTLE
+  END
+}
+
+type Game implements Node {
+  id: Int!
+  firstUserId: String!
+  secondUserId: String
+  playingUserId: String
+  phase: Phase
+  winningUserId: String
+  startedAt: DateTime
+  endedAt: DateTime
+  status: Status!
+}
