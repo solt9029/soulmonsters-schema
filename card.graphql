@@ -1,5 +1,5 @@
 type Card implements Node {
-  id: ID!
+  id: Int!
   name: String!
   kind: Kind!
   type: Type!

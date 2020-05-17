@@ -1,5 +1,5 @@
 type Deck implements Node {
-  id: ID!
+  id: Int!
   userId: String!
   name: String!
   createdAt: DateTime!

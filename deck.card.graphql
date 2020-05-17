@@ -1,13 +1,13 @@
 type DeckCard implements Node {
-  id: ID!
+  id: Int!
   count: Int!
   deck: Deck!
   card: Card!
 }
 
 input DeckCardUpdateInput {
-  deckId: String!
-  cardId: String!
+  deckId: Int!
+  cardId: Int!
 }
 
 type Mutation {
