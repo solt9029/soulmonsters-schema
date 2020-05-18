@@ -16,5 +16,5 @@ type Mutation {
 }
 
 type Query {
-  deckCards(deckId: Int!): [DeckCard!]!
+  deckCards(deckId: Int!): [DeckCard]
 }

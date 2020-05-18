@@ -36,5 +36,5 @@ enum Type {
 }
 
 type Query {
-  cards: [Card!]!
+  cards: [Card]
 }

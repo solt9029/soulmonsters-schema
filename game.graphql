@@ -28,4 +28,9 @@ type Game implements Node {
   startedAt: DateTime
   endedAt: DateTime
   status: Status!
+  players: [Player]
+}
+
+type Mutation {
+  startGame: Game!
 }
