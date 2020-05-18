@@ -1,0 +1,9 @@
+type Player implements Node {
+  id: Int!
+  userId: String!
+  energy: Int!
+  lifePoint: Int!
+  lastViewedAt: DateTime
+  deck: Deck!
+  game: Game!
+}

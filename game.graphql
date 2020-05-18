@@ -13,11 +13,16 @@ enum Phase {
   END
 }
 
+enum PlayingUser {
+  FIRST
+  SECOND
+}
+
 type Game implements Node {
   id: Int!
   firstUserId: String!
   secondUserId: String
-  playingUserId: String
+  playingUser: PlayingUser
   phase: Phase
   winningUserId: String
   startedAt: DateTime
