@@ -1,0 +1,28 @@
+type GameCard implements Node {
+  id: Int!
+  originalUserId: String!
+  currentUserId: String!
+  zone: Zone!
+  position: Int!
+  battlePosition: BattlePosition
+  name: String!
+  kind: Kind! # card.graphql
+  type: Type! # card.graphql
+  attribute: Attribute # card.graphql
+  attack: Int
+  defence: Int
+  cost: Int
+  detail: String
+}
+
+enum Zone {
+  BATTLE
+  DECK
+  SOUL
+  MORGUE
+}
+
+enum BattlePosition {
+  ATTACK
+  DEFENCE
+}
