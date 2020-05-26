@@ -31,6 +31,10 @@ type Game implements Node {
   players: [Player]
 }
 
+type Query {
+  game: Game!
+}
+
 type Mutation {
   startGame(deckId: Int!): Game!
 }
