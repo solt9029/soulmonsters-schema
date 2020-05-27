@@ -29,6 +29,7 @@ type Game implements Node {
   endedAt: DateTime
   status: Status!
   players: [Player]
+  gameCards: [GameCard]
 }
 
 type Query {
