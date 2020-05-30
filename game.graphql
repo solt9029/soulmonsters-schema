@@ -30,6 +30,7 @@ type Game implements Node {
   status: Status!
   players: [Player]
   gameCards: [GameCard]
+  gameHistories: [GameHistory]
 }
 
 type Query {
