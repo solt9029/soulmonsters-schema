@@ -1,0 +1,8 @@
+type GameHistory implements Node {
+  id: Int!
+  detail: String!
+}
+
+type Query {
+  gameHistories(gameId: Int!): [GameHistory!]!
+}
