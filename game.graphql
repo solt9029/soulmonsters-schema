@@ -33,7 +33,7 @@ type Game implements Node {
 }
 
 type Query {
-  game: Game!
+  game(id: Int!): Game!
   activeGameId: Int
 }
 
