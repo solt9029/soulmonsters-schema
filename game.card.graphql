@@ -5,15 +5,15 @@ type GameCard implements Node {
   zone: Zone!
   position: Int!
   battlePosition: BattlePosition
-  name: String!
-  kind: Kind! # card.graphql
-  type: Type! # card.graphql
+  name: String
+  kind: Kind # card.graphql
+  type: Type # card.graphql
   attribute: Attribute # card.graphql
   attack: Int
   defence: Int
   cost: Int
   detail: String
-  card: Card!
+  card: Card
 }
 
 enum Zone {
