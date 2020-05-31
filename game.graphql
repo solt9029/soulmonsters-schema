@@ -23,6 +23,7 @@ type Game implements Node {
   firstUserId: String!
   secondUserId: String
   playingUser: PlayingUser
+  turnCount: Int!
   phase: Phase
   winningUserId: String
   startedAt: DateTime
