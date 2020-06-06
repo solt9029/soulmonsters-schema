@@ -1,9 +1,3 @@
-enum Status {
-  WAIT
-  PLAY
-  END
-}
-
 enum Phase {
   DRAW
   ENERGY
@@ -13,23 +7,14 @@ enum Phase {
   END
 }
 
-enum PlayingUser {
-  FIRST
-  SECOND
-}
-
 type Game implements Node {
   id: Int!
-  firstUserId: String!
-  secondUserId: String
-  playingUser: PlayingUser
-  turnCount: Int!
+  turnUserId: String
   phase: Phase
-  winningUserId: String
+  winnerUserId: String
   startedAt: DateTime
   endedAt: DateTime
-  status: Status!
-  players: [Player]
+  gameUsers: [GameUser]
   gameCards: [GameCard]
   gameHistories: [GameHistory]
 }

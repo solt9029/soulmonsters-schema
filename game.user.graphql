@@ -1,4 +1,4 @@
-type Player implements Node {
+type GameUser implements Node {
   id: Int!
   userId: String!
   energy: Int
