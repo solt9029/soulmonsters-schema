@@ -6,4 +6,5 @@ type GameUser implements Node {
   lastViewedAt: DateTime
   deck: Deck!
   game: Game!
+  actions: [Action]
 }
