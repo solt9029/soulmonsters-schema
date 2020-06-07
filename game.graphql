@@ -14,9 +14,9 @@ type Game implements Node {
   winnerUserId: String
   startedAt: DateTime
   endedAt: DateTime
-  gameUsers: [GameUser]
-  gameCards: [GameCard]
-  gameHistories: [GameHistory]
+  gameUsers: [GameUser!]!
+  gameCards: [GameCard!]!
+  gameHistories: [GameHistory!]!
 }
 
 type Query {
