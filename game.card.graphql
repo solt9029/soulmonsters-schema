@@ -13,7 +13,7 @@ type GameCard implements Node {
   defence: Int
   cost: Int
   detail: String
-  card: Card!
+  card: Card
   actions: [Action!]!
 }
 
