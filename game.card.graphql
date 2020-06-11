@@ -14,6 +14,7 @@ type GameCard implements Node {
   cost: Int
   detail: String
   card: Card!
+  actions: [Action!]!
 }
 
 enum Zone {
