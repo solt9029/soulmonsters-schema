@@ -19,6 +19,17 @@ type Game implements Node {
   gameHistories: [GameHistory!]!
 }
 
+input GameActionPayload {
+  targetGameCardIds: [Int!]
+  costGameCardIds: [Int!]
+  targetGameUserIds: [String!]
+}
+
+input DispatchGameActionInput {
+  type: ActionType!
+  payload: GameActionPayload
+}
+
 type Query {
   game(id: Int!): Game!
   activeGameId: Int
@@ -26,4 +37,5 @@ type Query {
 
 type Mutation {
   startGame(deckId: Int!): Game!
+  dispatchGameAction(data: DispatchGameActionInput!): Game!
 }
