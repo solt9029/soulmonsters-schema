@@ -1,4 +1,4 @@
-enum Action {
+enum ActionType {
   START_DRAW_TIME
   START_ENERGY_TIME
   START_PUT_TIME
