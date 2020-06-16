@@ -19,7 +19,7 @@ type Game implements Node {
   gameHistories: [GameHistory!]!
 }
 
-input GameActionPayload {
+input ActionPayload {
   targetGameCardIds: [Int!]
   costGameCardIds: [Int!]
   targetGameUserIds: [String!]
@@ -27,7 +27,7 @@ input GameActionPayload {
 
 input DispatchGameActionInput {
   type: ActionType!
-  payload: GameActionPayload
+  payload: ActionPayload
 }
 
 type Query {
