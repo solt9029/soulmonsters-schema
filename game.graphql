@@ -20,7 +20,6 @@ type Game implements Node {
 }
 
 input ActionPayload {
-  gameCardId: Int
   targetGameCardIds: [Int!]
   costGameCardIds: [Int!]
   targetGameUserIds: [Int!]
@@ -28,6 +27,7 @@ input ActionPayload {
 
 input DispatchGameActionInput {
   type: ActionType!
+  gameCardId: Int
   payload: ActionPayload
 }
 
