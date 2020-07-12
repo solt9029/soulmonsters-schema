@@ -11,5 +11,4 @@ enum ActionType {
   SUMMON_MONSTER
   ATTACK
   USE_SOUL_BARRIER
-  BATTLE
 }
