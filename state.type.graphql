@@ -1,3 +1,4 @@
 enum StateType {
   ATTACK_COUNT
+  SELF_POWER_CHANGE
 }
