@@ -1,0 +1,3 @@
+enum StateType {
+  ATTACK_COUNT
+}
