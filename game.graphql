@@ -19,18 +19,6 @@ type Game implements Node {
   gameHistories: [GameHistory!]!
 }
 
-input ActionPayload {
-  targetGameCardIds: [Int!]
-  costGameCardIds: [Int!]
-  targetGameUserIds: [Int!]
-}
-
-input DispatchGameActionInput {
-  type: ActionType!
-  gameCardId: Int
-  payload: ActionPayload
-}
-
 type Query {
   game(id: Int!): Game!
   activeGameId: Int
@@ -38,5 +26,17 @@ type Query {
 
 type Mutation {
   startGame(deckId: Int!): Game!
-  dispatchGameAction(id: Int!, data: DispatchGameActionInput!): Game!
+  dispatchStartDrawTimeAction(id: Int!, data: StartDrawTimeActionDispatchInput!): Game!
+  dispatchStartEnergyTimeAction(id: Int!, data: StartEnergyTimeActionDispatchInput!): Game!
+  dispatchStartPutTimeAction(id: Int!, data: StartPutTimeActionDispatchInput!): Game!
+  dispatchStartSomethingTimeAction(id: Int!, data: StartSomethingTimeActionDispatchInput!): Game!
+  dispatchStartBattleTimeAction(id: Int!, data: StartBattleTimeActionDispatchInput!): Game!
+  dispatchStartEndTimeAction(id: Int!, data: StartEndTimeActionDispatchInput!): Game!
+  dispatchFinishEndTimeAction(id: Int!, data: FinishEndTimeActionDispatchInput!): Game!
+  dispatchPutSoulAction(id: Int!, data: PutSoulActionDispatchInput!): Game!
+  dispatchChangeBattlePositionAction(id: Int!, data: ChangeBattlePositionActionDispatchInput!): Game!
+  dispatchUseSoulCanonAction(id: Int!, data: UseSoulCanonActionDispatchInput!): Game!
+  dispatchSummonMonsterAction(id: Int!, data: SummonMonsterActionDispatchInput!): Game!
+  dispatchAttackAction(id: Int!, data: AttackActionDispatchInput!): Game!
+  dispatchUseSoulBarrierAction(id: Int!, data: UseSoulBarrierActionDispatchInput!): Game!
 }

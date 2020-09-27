@@ -1,0 +1,170 @@
+enum StartDrawTimeActionType {
+  START_DRAW_TIME
+}
+type StartDrawTimeActionTypeBox {
+  value: StartDrawTimeActionType!
+}
+input StartDrawTimeActionDispatchInput {
+  type: StartDrawTimeActionType!
+}
+
+enum StartEnergyTimeActionType {
+  START_ENERGY_TIME
+}
+type StartEnergyTimeActionTypeBox {
+  value: StartEnergyTimeActionType!
+}
+input StartEnergyTimeActionDispatchInput {
+  type: StartEnergyTimeActionType!
+}
+
+enum StartPutTimeActionType {
+  START_PUT_TIME
+}
+type StartPutTimeActionTypeBox {
+  value: StartPutTimeActionType!
+}
+input StartPutTimeActionDispatchInput {
+  type: StartPutTimeActionType!
+}
+
+enum StartSomethingTimeActionType {
+  START_SOMETHING_TIME
+}
+type StartSomethingTimeActionTypeBox {
+  value: StartSomethingTimeActionType!
+}
+input StartSomethingTimeActionDispatchInput {
+  type: StartSomethingTimeActionType!
+}
+
+enum StartBattleTimeActionType {
+  START_BATTLE_TIME
+}
+type StartBattleTimeActionTypeBox {
+  value: StartBattleTimeActionType!
+}
+input StartBattleTimeActionDispatchInput {
+  type: StartBattleTimeActionType!
+}
+
+enum StartEndTimeActionType {
+  START_END_TIME
+}
+type StartEndTimeActionTypeBox {
+  value: StartEndTimeActionType!
+}
+input StartEndTimeActionDispatchInput {
+  type: StartEndTimeActionType!
+}
+
+enum FinishEndTimeActionType {
+  FINISH_END_TIME
+}
+type FinishEndTimeActionTypeBox {
+  value: FinishEndTimeActionType!
+}
+input FinishEndTimeActionDispatchInput {
+  type: FinishEndTimeActionType!
+}
+
+enum PutSoulActionType {
+  PUT_SOUL
+}
+type PutSoulActionTypeBox {
+  value: PutSoulActionType!
+}
+type PutSoulActionPayload {
+  gameCardId: Int!
+}
+input PutSoulActionDispatchInput {
+  type: PutSoulActionType!
+  payload: PutSoulActionPayload!
+}
+
+enum ChangeBattlePositionActionType {
+  CHANGE_BATTLE_POSITION
+}
+type ChangeBattlePositionActionTypeBox {
+  value: ChangeBattlePositionActionType!
+}
+type ChangeBattlePositionActionPayload {
+  gameCardId: Int!
+}
+input ChangeBattlePositionActionDispatchInput {
+  type: ChangeBattlePositionActionType!
+  payload: ChangeBattlePositionActionPayload!
+}
+
+enum UseSoulCanonActionType {
+  USE_SOUL_CANON
+}
+type UseSoulCanonActionTypeBox {
+  value: UseSoulCanonActionType!
+}
+type UseSoulCanonActionPayload {
+  costGameCardIds: [Int!]!
+}
+input UseSoulCanonActionDispatchInput {
+  type: UseSoulCanonActionType!
+  payload: UseSoulCanonActionPayload!
+}
+
+enum SummonMonsterActionType {
+  SUMMON_MONSTER
+}
+type SummonMonsterActionTypeBox {
+  value: SummonMonsterActionType!
+}
+type SummonMonsterActionPayload {
+  gameCardId: Int!
+}
+input SummonMonsterActionDispatchInput {
+  type: SummonMonsterActionType!
+  payload: SummonMonsterActionPayload!
+}
+
+enum AttackActionType {
+  ATTACK
+}
+type AttackActionTypeBox {
+  value: AttackActionType!
+}
+type AttackActionPayload {
+  gameCardId: Int!
+  targetGameCardId: Int
+  targetGameUserId: Int
+}
+input AttackActionDispatchInput {
+  type: AttackActionType!
+  payload: AttackActionPayload!
+}
+
+enum UseSoulBarrierActionType {
+  USE_SOUL_BARRIER
+}
+type UseSoulBarrierActionTypeBox {
+  value: UseSoulBarrierActionType!
+}
+type UseSoulBarrierActionPayload {
+  costGameCardIds: [Int!]!
+}
+input UseSoulBarrierActionDispatchInput {
+  type: UseSoulBarrierActionType!
+  payload: UseSoulBarrierActionPayload!
+}
+
+union ActionType =
+  StartDrawTimeActionTypeBox |
+  StartEnergyTimeActionTypeBox |
+  StartPutTimeActionTypeBox |
+  StartSomethingTimeActionTypeBox |
+  StartBattleTimeActionTypeBox |
+  StartEndTimeActionTypeBox |
+  FinishEndTimeActionTypeBox |
+  PutSoulActionTypeBox |
+  ChangeBattlePositionActionTypeBox |
+  UseSoulCanonActionTypeBox |
+  SummonMonsterActionTypeBox |
+  AttackActionTypeBox |
+  UseSoulBarrierActionTypeBox
