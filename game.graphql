@@ -26,7 +26,7 @@ input ActionPayload {
   targetGameUserIds: [Int!]
 }
 
-input DispatchGameActionInput {
+input GameActionDispatchInput {
   type: ActionType!
   payload: ActionPayload!
 }
@@ -38,5 +38,5 @@ type Query {
 
 type Mutation {
   startGame(deckId: Int!): Game!
-  dispatchGameAction(id: Int!, data: DispatchGameActionInput!): Game!
+  dispatchGameAction(id: Int!, data: GameActionDispatchInput!): Game!
 }
