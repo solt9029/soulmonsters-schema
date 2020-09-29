@@ -1,9 +1,0 @@
-type GameHistory implements Node {
-  id: Int!
-  detail: String!
-  createdAt: DateTime!
-}
-
-type Query {
-  gameHistories(gameId: Int!): [GameHistory!]!
-}

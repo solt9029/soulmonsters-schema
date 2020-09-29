@@ -16,7 +16,6 @@ type Game implements Node {
   endedAt: DateTime
   gameUsers: [GameUser!]!
   gameCards: [GameCard!]!
-  gameHistories: [GameHistory!]!
 }
 
 input ActionPayload {
